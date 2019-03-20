@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css" />
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css" />
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="resizer/jquery-resizable.js"></script>
+    <script src="resizer/jquery-resizableTableColumns.js"></script>
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="ms-CommandBar ms-CommandBar--navBar">
+        <div class="ms-CommandBar-sideCommands">
+            <div class="ms-CommandButton ms-CommandButton--dropdown">
+                <div class="ms-ContextualMenuExample">
+                    <a class="ms-Button ms-Button--primary">
+                        <span class="ms-Button-label">
+                            <i class="ms-Icon ms-Icon--FollowUser"></i> User Login
+                        </span>
+                    </a>
+                    <ul class="ms-ContextualMenu is-hidden">
+                        <li class="ms-ContextualMenu-item">
+                            <a class="ms-ContextualMenu-link" tabindex="1">
+                                <i class="ms-Icon ms-Icon--UserFollowed"></i> Animals
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ms-CommandButton ms-CommandButton--noLabel">
+                <button class="ms-CommandButton-button">
+                    <!-- <span class="ms-CommandButton-icon ms-fontColor-themePrimary"><i class="ms-Icon ms-Icon--Info"></i></span> 
+                      <span class="ms-CommandButton-label"></span>  -->
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="page-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Design No: 422</th>
+                    <th>Bangle Sizes</th>
+                </tr>
+            </thead>
+        </table>
+        <table class="ms-Table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Modified</th>
+                    <th>Type</th>
+                    <th>File Name</th>
+                    <th>Location</th>
+                    <th>Modified</th>
+                    <th>Type</th>
+                    <th>File Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                    <td>Location</td>
+                    <td>Modified</td>
+                    <td>Type</td>
+                    <td>File Name</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <p>
+            To create resizable columns requires a bit of extra effort as tables don't have an easy way to create a
+            drag handle that can be moved around.
+        </p>
+
+    </div>
+
+    <label>Horizontal Splitter Panes:</label>
+
+    <div class="panel-container">
+
+        <div class="panel-left">
+            left panel
+        </div>
+
+        <div class="splitter">
+        </div>
+
+        <div class="panel-right">
+            right panel
+        </div>
+    </div>
+
+    <script>
+        var ContextualMenuElements = document.querySelectorAll(".ms-ContextualMenuExample");
+        for (var i = 0; i < ContextualMenuElements.length; i++) {
+            var ButtonElement = ContextualMenuElements[i].querySelector(".ms-Button");
+            var ContextualMenuElement = ContextualMenuElements[i].querySelector(".ms-ContextualMenu");
+            new fabric['ContextualMenu'](ContextualMenuElement, ButtonElement);
+        }
+        var TableElements = document.querySelectorAll(".ms-Table");
+        for (var i = 0; i < TableElements.length; i++) {
+            new fabric['Table'](TableElements[i]);
+        }
+
+        //$("td,th")
+        $("td:first-child,td:nth-child(2),td:nth-child(3)")
+            .css({
+                /* required to allow resizer embedding */
+                position: "relative"
+            })
+            /* check .resizer CSS */
+            .prepend("<div class='resizer'></div>")
+            .resizable({
+                resizeHeight: false,
+                // we use the column as handle and filter
+                // by the contained .resizer element
+                handleSelector: "",
+                onDragStart: function (e, $el, opt) {
+                    // only drag resizer
+                    if (!$(e.target).hasClass("resizer"))
+                        return false;
+                    return true;
+                }
+            });
+
+        $(".panel-left").resizable({
+            handleSelector: ".splitter",
+            resizeHeight: false
+        });
+
+        $(".panel-top").resizable({
+            handleSelector: ".splitter-horizontal",
+            resizeWidth: false
+        });
+
+        (function ($, window, document, undefined) {
+            var pluginName = "editable",
+                defaults = {
+                    keyboard: true,
+                    dblclick: true,
+                    button: true,
+                    buttonSelector: ".edit",
+                    maintainWidth: true,
+                    dropdowns: {},
+                    edit: function () {},
+                    save: function () {},
+                    cancel: function () {}
+                };
+
+            function editable(element, options) {
+                this.element = element;
+                this.options = $.extend({}, defaults, options);
+
+                this._defaults = defaults;
+                this._name = pluginName;
+
+                this.init();
+            }
+
+            editable.prototype = {
+                init: function () {
+                    this.editing = false;
+
+                    if (this.options.dblclick) {
+                        $(this.element)
+                            .css('cursor', 'pointer')
+                            .bind('dblclick', this.toggle.bind(this));
+                    }
+
+                    if (this.options.button) {
+                        $(this.options.buttonSelector, this.element)
+                            .bind('click', this.toggle.bind(this));
+                    }
+                },
+
+                toggle: function (e) {
+                    e.preventDefault();
+
+                    this.editing = !this.editing;
+
+                    if (this.editing) {
+                        this.edit();
+                    } else {
+                        this.save();
+                    }
+                },
+
+                edit: function () {
+                    var instance = this,
+                        values = {};
+
+                    $('td[data-field]', this.element).each(function () {
+                        var input,
+                            field = $(this).data('field'),
+                            value = $(this).text(),
+                            width = $(this).width();
+
+                        values[field] = value;
+
+                        $(this).empty();
+
+                        if (instance.options.maintainWidth) {
+                            $(this).width(width);
+                        }
+
+                        if (field in instance.options.dropdowns) {
+                            input = $('<select></select>');
+
+                            for (var i = 0; i < instance.options.dropdowns[field].length; i++) {
+                                $('<option></option>')
+                                    .text(instance.options.dropdowns[field][i])
+                                    .appendTo(input);
+                            };
+
+                            input.val(value)
+                                .data('old-value', value)
+                                .dblclick(instance._captureEvent);
+                        } else {
+                            input = $('<input type="text" />')
+                                .val(value)
+                                .data('old-value', value)
+                                .dblclick(instance._captureEvent);
+                        }
+
+                        input.appendTo(this);
+
+                        if (instance.options.keyboard) {
+                            input.keydown(instance._captureKey.bind(instance));
+                        }
+                    });
+
+                    this.options.edit.bind(this.element)(values);
+                },
+
+                save: function () {
+                    var instance = this,
+                        values = {};
+
+                    $('td[data-field]', this.element).each(function () {
+                        var value = $(':input', this).val();
+
+                        values[$(this).data('field')] = value;
+
+                        $(this).empty()
+                            .text(value);
+                    });
+
+                    this.options.save.bind(this.element)(values);
+                },
+
+                cancel: function () {
+                    var instance = this,
+                        values = {};
+
+                    $('td[data-field]', this.element).each(function () {
+                        var value = $(':input', this).data('old-value');
+
+                        values[$(this).data('field')] = value;
+
+                        $(this).empty()
+                            .text(value);
+                    });
+
+                    this.options.cancel.bind(this.element)(values);
+                },
+
+                _captureEvent: function (e) {
+                    e.stopPropagation();
+                },
+
+                _captureKey: function (e) {
+                    if (e.which === 13) {
+                        this.editing = false;
+                        this.save();
+                    } else if (e.which === 27) {
+                        this.editing = false;
+                        this.cancel();
+                    }
+                }
+            };
+
+            $.fn[pluginName] = function (options) {
+                return this.each(function () {
+                    if (!$.data(this, "plugin_" + pluginName)) {
+                        $.data(this, "plugin_" + pluginName,
+                            new editable(this, options));
+                    }
+                });
+            };
+
+        })(jQuery, window, document);
+
+        editTable();
+
+        //custome editable starts
+        function editTable() {
+
+            $(function () {
+                var pickers = {};
+
+                $('table tr').editable({
+                    dropdowns: {
+                        sex: ['Male', 'Female']
+                    },
+                    edit: function (values) {
+                        $(".edit i", this)
+                            .removeClass('fa-pencil')
+                            .addClass('fa-save')
+                            .attr('title', 'Save');
+
+                        pickers[this] = new Pikaday({
+                            field: $("td[data-field=birthday] input", this)[0],
+                            format: 'MMM D, YYYY'
+                        });
+                    },
+                    save: function (values) {
+                        $(".edit i", this)
+                            .removeClass('fa-save')
+                            .addClass('fa-pencil')
+                            .attr('title', 'Edit');
+
+                        if (this in pickers) {
+                            pickers[this].destroy();
+                            delete pickers[this];
+                        }
+                    },
+                    cancel: function (values) {
+                        $(".edit i", this)
+                            .removeClass('fa-save')
+                            .addClass('fa-pencil')
+                            .attr('title', 'Edit');
+
+                        if (this in pickers) {
+                            pickers[this].destroy();
+                            delete pickers[this];
+                        }
+                    }
+                });
+            });
+
+        }
+    </script>
+</body>
+
+</html>

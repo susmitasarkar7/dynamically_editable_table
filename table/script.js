@@ -166,7 +166,7 @@
 
             $('table tr').editable({
                 dropdowns: {
-                    sex: ['Male', 'Female']
+                    size: ['Big', 'Round']
                 },
                 edit: function (values) {
                     $(".edit i", this)
